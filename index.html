@@ -7,12 +7,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Telex&family=Workbench&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_forward" />
 </head>
 <body>
     <h2>Hi, I'm</h2>
     <h1>Miro Kokki</h1>
     <h3>AKA. poopoofartnut</h3>
-    <p></p>
+    <button class="hover-underline-animation"><span class="material-symbols-outlined">arrow_forward</span>Projects</button>
+    <button class="hover-underline-animation"><span class="material-symbols-outlined">arrow_forward</span>About Me</button>
+    <button class="hover-underline-animation"><span class="material-symbols-outlined">arrow_forward</span>Socials</button>
 </body>
 </html>
 <style>
@@ -25,6 +28,44 @@
         line-height: 10px;
         margin: 0.5in;
         overflow-x: none;
+        display: flex;
+        flex-direction: column;
+    }
+    button{
+        font-size: 25pt;
+        font-family: "Telex", sans-serif;
+        color: rgb(255, 255, 255);
+        border: none;
+        text-decoration: none;
+        background-color: rgba(255, 255, 255, 0);
+        width: max-content;
+    }
+    button:hover{
+        transition-duration: 0.25s;
+        transition-timing-function: ease-in-out;
+        transform: scale(1.1);
+    }
+    .hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    }
+
+    .hover-underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ffffff;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+    }
+
+    .hover-underline-animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
     }
     h3{
         color: rgb(93, 93, 93);
